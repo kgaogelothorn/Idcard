@@ -1,11 +1,20 @@
 body,html {
     height: auto;
 }
-ul {
+ul, li {
     list-style: none;
+    font-size: larger;
+}
+i {
+    color:lightgray ;
+    padding-right: 5px;
 }
 h3 {
     padding-left: 40px;
+    font-size: x-large;
+}
+.id {
+    margin-left: 200px;
 }
 .header {
     height: 300px;
@@ -15,9 +24,14 @@ h3 {
 .container {
     padding: .70rem;
     background: #00a4ff45;
+    margin-bottom: 10px;
     height: 80px;
     width: 60%;
 }
 .container-info {
     display: grid;
+    grid-template-columns: 20% 80%;
+}
+img {
+    margin-top: 17px;
 }
