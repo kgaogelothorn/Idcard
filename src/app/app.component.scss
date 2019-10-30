@@ -14,7 +14,10 @@ h3 {
 }
 .container {
     padding: .70rem;
-    background: red;
+    background: #00a4ff45;
     height: 80px;
     width: 60%;
+}
+.container-info {
+    display: grid;
 }
