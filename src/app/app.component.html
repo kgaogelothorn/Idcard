@@ -3,22 +3,22 @@
 </div>
 <div class="id">
     <div class="container">
-        <div class="col">
-            <h1>Name</h1>
+        <div class="col" *ngIf="showInfo.name">
+            <h1>{{UserInfo?.firstname}} {{UserInfo?.lastname}}</h1>
         </div>
     </div>
     <div class="container-info">
         <div class="col">
-            <img src="../assets/37198141_1792718884154023_1261669668519673856_n.jpg" alt="me" width="210x">
+            <img *ngIf="UserInfo.image" [src]="UserInfo.image" alt="me" width="210px">
         </div>
         <div class="col">
             <h3>About</h3>
             <ul>
-                <li><i class="fa fa-envelope"></i>Email</li>
-                <li><i class="fa fa-calendar"></i>Birthday</li>
-                <li><i class="fa fa-street-view"></i>Address</li>
-                <li><i class="fa fa-phone"></i>Phone number</li>
-                <li><i class="fa fa-user"></i>Gender</li>
+                <li><i  class="fa fa-envelope"></i>{{UserInfo?.email}}</li>
+                <li><i class="fa fa-calendar"></i>{{UserInfo?.birthdate| date:full }}</li>
+                <li><i class="fa fa-street-view"></i>{{UserInfo?.location}}</li>
+                <li><i class="fa fa-phone"></i>{{UserInfo?.phone}}</li>
+                <li><i class="fa fa-user"></i>{{UserInfo?.gender}}</li>
             </ul>
         </div>
     </div>
