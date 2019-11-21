@@ -1,21 +1,19 @@
-<div class="header">
-
-</div>
-<div class="id">
-    <div class="container">
-        <div class="col" *ngIf="showInfo.name">
-            <h1>{{UserInfo?.firstname}} {{UserInfo?.lastname}}</h1>
-        </div>
-    </div>
-    <div class="container-info">
-        <div class="col">
-            <img *ngIf="UserInfo.image" [src]="UserInfo.image" alt="me" width="210px">
-        </div>
-        <div class="col">
-            <h3>About</h3>
-            <ul>
-                <li><i  class="fa fa-envelope"></i>{{UserInfo?.email}}</li>
+<div class="container marketing mt-4">
+    <div class="row">
+        <div class=" col-md-4 shadow-sm pt-3">
+            <img *ngIf="UserInfo.image" class="bd-placeholder-img rounded-circle" width="140" height="140"
+                [src]="UserInfo.image" alt="User">
+            <svg *ngIf="!UserInfo.image" class="bd-placeholder-img rounded-circle" width="140" height="140"
+                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                aria-label="Placeholder: 140x140">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                    dy=".3em">140x140</text>
+            </svg>
+            <h2 *ngIf="showInfo.name">{{UserInfo?.firstname}} {{UserInfo?.lastname}}</h2>
+            <ul class="p-0">
                 <li><i class="fa fa-calendar"></i>{{UserInfo?.birthdate| date:full }}</li>
+                <li><i class="fa fa-envelope"></i>{{UserInfo?.email}}</li>
                 <li><i class="fa fa-street-view"></i>{{UserInfo?.location}}</li>
                 <li><i class="fa fa-phone"></i>{{UserInfo?.phone}}</li>
                 <li><i class="fa fa-user"></i>{{UserInfo?.gender}}</li>
