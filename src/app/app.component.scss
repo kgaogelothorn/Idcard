@@ -1,8 +1,24 @@
-.content {
-    display: flex;
-    justify-content: center;
+.custom-card-body {
+    width: 80%;
+    margin: auto;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    border: 0;
+    border-radius: 0.25rem;
 }
-ul, li {
-    list-style: none;
-    font-size: larger;
+.card-img-top {
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+
+}
+.blue-text {
+    color: #2196f3 !important;
+}
+.li-ic {
+    color: #0082ca !important;
+}.tw-ic {
+    color: #55acee !important;
+}
+.fb-ic {
+    color: #3b5998 !important;
 }

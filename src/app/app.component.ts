@@ -27,6 +27,7 @@ export class AppComponent {
       this.UserInfo.phone = user.results[0].phone;
       this.UserInfo.gender = user.results[0].gender;
     });
+    console.log('');
   }
 
   getUserInfo() {

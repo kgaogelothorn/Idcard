@@ -1,23 +1,41 @@
-<div class="container marketing mt-4">
-    <div class="row">
-        <div class=" col-md-4 shadow-sm pt-3">
-            <img *ngIf="UserInfo.image" class="bd-placeholder-img rounded-circle" width="140" height="140"
-                [src]="UserInfo.image" alt="User">
-            <svg *ngIf="!UserInfo.image" class="bd-placeholder-img rounded-circle" width="140" height="140"
-                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
-                aria-label="Placeholder: 140x140">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
-            <h2 *ngIf="showInfo.name">{{UserInfo?.firstname}} {{UserInfo?.lastname}}</h2>
-            <ul class="p-0">
-                <li><i class="fa fa-calendar"></i>{{UserInfo?.birthdate| date:full }}</li>
-                <li><i class="fa fa-envelope"></i>{{UserInfo?.email}}</li>
-                <li><i class="fa fa-street-view"></i>{{UserInfo?.location}}</li>
-                <li><i class="fa fa-phone"></i>{{UserInfo?.phone}}</li>
-                <li><i class="fa fa-user"></i>{{UserInfo?.gender}}</li>
-            </ul>
+<div class="container">
+    <div class="row justify-content-center m-5">
+        <div class="col-md-4">
+
+            <div class="card card-cascade wider border-0">
+
+                <!-- Card image -->
+                <div class="view view-cascade overlay shadow-lg">
+                    <img *ngIf="UserInfo.image" class="card-img-top" [src]="UserInfo.image"
+                        alt="Card image cap">
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+
+                <!-- Card content -->
+                <div class="card-body custom-card-body card-body-cascade text-center p-0">
+                    <div class="card-content m-3">
+                        <!-- Title -->
+                        <h4 *ngIf="showInfo.name" class="card-title"><strong>{{UserInfo?.firstname}} {{UserInfo?.lastname}}</strong></h4>
+                        <!-- Subtitle -->
+                        <h5 class="blue-text pb-2"><strong>{{ UserInfo?.birthdate | date: fullDate }}</strong></h5>
+
+                        <h6 class=" pb-2"><strong>{{UserInfo?.gender}}</strong></h6>
+                        <!-- Text -->
+                        <p class="card-text small">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+                            doloremque
+                            laudantium, totam rem aperiam. </p>
+
+                        <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+                        <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+
+
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
